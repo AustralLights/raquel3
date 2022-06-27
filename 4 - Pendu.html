@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<html>
+<head>
+  <title>Pendu</title>
+  <style type="text/css">
+
+    .lettres {
+    	border: 1px solid;
+        width: 30px;
+        height: 30px;
+        background-color:#eeeeee;
+    }
+
+    td {
+     	border: 1px solid;
+        width: 30px;
+        height: 30px;
+        font-size: 16pt;
+        text-align: center;
+    }
+
+    .gauche{
+   		float: left;
+   		width:25%;
+	}
+     
+    .droite{
+   		float: right;
+   		width:25%;
+	}
+
+  </style>
+</head>
+
+<body>
+
+<div class="gauche">
+<table id="myTable">
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+</div>
+
+<div classe="droite">
+<img id="image" src="images/0.png" width=150px; alt="Trop de cockers">
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<button type="button" class="lettres" id="butA" onclick="testA();"> A</button>
+<button type="button" class="lettres" id="butB" onclick="testB();"> B</button>
+<button type="button" class="lettres" id="butC" onclick="testC();"> C</button>
+<button type="button" class="lettres" id="butD" onclick="testD();"> D</button>
+<button type="button" class="lettres" id="butE" onclick="testE();"> E</button>
+<button type="button" class="lettres" id="butF" onclick="testF();"> F</button>
+<button type="button" class="lettres" id="butG" onclick="testG();"> G</button>
+<button type="button" class="lettres" id="butH" onclick="testH();"> H</button>
+<button type="button" class="lettres" id="butI" onclick="testI();"> I</button>
+<button type="button" class="lettres" id="butJ" onclick="testJ();"> J</button>
+</br>
+<button type="button" class="lettres" id="butK" onclick="testK();"> K</button>
+<button type="button" class="lettres" id="butL" onclick="testL();"> L</button>
+<button type="button" class="lettres" id="butM" onclick="testM();"> M</button>
+<button type="button" class="lettres" id="butN" onclick="testN();"> N</button>
+<button type="button" class="lettres" id="butO" onclick="testO();"> O</button>
+<button type="button" class="lettres" id="butP" onclick="testP();"> P</button>
+<button type="button" class="lettres" id="butQ" onclick="testQ();"> Q</button>
+<button type="button" class="lettres" id="butR" onclick="testR();"> R</button>
+<button type="button" class="lettres" id="butS" onclick="testS();"> S</button>
+<button type="button" class="lettres" id="butT" onclick="testT();"> T</button>
+</br>
+<button type="button" class="lettres" id="butU" onclick="testU();"> U</button>
+<button type="button" class="lettres" id="butV" onclick="testV();"> V</button>
+<button type="button" class="lettres" id="butW" onclick="testW();"> W</button>
+<button type="button" class="lettres" id="butX" onclick="testX();"> X</button>
+<button type="button" class="lettres" id="butY" onclick="testY();"> Y</button>
+<button type="button" class="lettres" id="butZ" onclick="testZ();"> Z</button>
+<br/><br/><br/><br/>
+
+<input type="button" id="lasuite" onclick="location.href='https://rpgplayground.com/?post_type=game&p=70666';" hidden value="La suite ici !" />
+
+<script type="text/javascript">
+
+
+function testA() {
+	document.getElementById("butA").disabled = true;
+	document.getElementById("butA").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[7].innerHTML = 'A';
+	myTable.rows[2].cells[4].innerHTML = 'A';
+	myTable.rows[3].cells[1].innerHTML = 'A';
+	myTable.rows[3].cells[3].innerHTML = 'A';
+	myTable.rows[3].cells[6].innerHTML = 'A';
+	checkwin()
+}
+
+function testB() {
+	document.getElementById("butB").disabled = true;
+	document.getElementById("butB").style.background='#ffbbbb';
+	other()
+}
+
+function testC() {
+	document.getElementById("butC").disabled = true;
+	document.getElementById("butC").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[2].innerHTML = 'C';
+	checkwin()
+}
+
+function testD() {
+	document.getElementById("butD").disabled = true;
+	document.getElementById("butD").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[2].cells[2].innerHTML = 'D';
+	checkwin()
+}
+
+function testE() {
+	document.getElementById("butE").disabled = true;
+	document.getElementById("butE").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[0].innerHTML = 'E';
+	myTable.rows[2].cells[1].innerHTML = 'E';
+	checkwin()
+}
+
+function testF() {
+	document.getElementById("butF").disabled = true;
+	document.getElementById("butF").style.background='#ffbbbb';
+	other()
+}
+
+function testG() {
+	document.getElementById("butG").disabled = true;
+	document.getElementById("butG").style.background='#ffbbbb';
+	other()
+}	
+
+function testH() {
+	document.getElementById("butH").disabled = true;
+	document.getElementById("butH").style.background='#ffbbbb';
+	other()
+}	
+
+function testI() {
+	document.getElementById("butI").disabled = true;
+	document.getElementById("butI").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[2].cells[3].innerHTML = 'I';
+	checkwin()
+}
+
+function testJ() {
+	document.getElementById("butJ").disabled = true;
+	document.getElementById("butJ").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[3].cells[5].innerHTML = 'J';
+	checkwin()
+}
+
+function testK() {
+	document.getElementById("butK").disabled = true;
+	document.getElementById("butK").style.background='#ffbbbb';
+	other()
+}
+
+function testL() {
+	document.getElementById("butL").disabled = true;
+	document.getElementById("butL").style.background='#ffbbbb';
+	other()
+}
+
+function testM() {
+	document.getElementById("butM").disabled = true;
+	document.getElementById("butM").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[2].cells[0].innerHTML = 'M';
+	checkwin()
+}
+
+function testN() {
+	document.getElementById("butN").disabled = true;
+	document.getElementById("butN").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[1].innerHTML = 'N';
+	myTable.rows[0].cells[4].innerHTML = 'N';
+	myTable.rows[3].cells[0].innerHTML = 'N';
+	myTable.rows[3].cells[4].innerHTML = 'N';
+	checkwin()
+}
+
+function testO() {
+	document.getElementById("butO").disabled = true;
+	document.getElementById("butO").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[3].innerHTML = 'O';
+	checkwin()
+}
+
+function testP() {
+	document.getElementById("butP").disabled = true;
+	document.getElementById("butP").style.background='#ffbbbb';
+	other()
+}
+
+function testQ() {
+	document.getElementById("butQ").disabled = true;
+	document.getElementById("butQ").style.background='#ffbbbb';
+	other()
+}
+
+function testR() {
+	document.getElementById("butR").disabled = true;
+	document.getElementById("butR").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[6].innerHTML = 'R';
+	myTable.rows[0].cells[8].innerHTML = 'R';
+	myTable.rows[3].cells[2].innerHTML = 'R';
+	checkwin()
+}
+
+function testS() {
+	document.getElementById("butS").disabled = true;
+	document.getElementById("butS").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[1].cells[0].innerHTML = 'S';
+	checkwin()
+}
+
+function testT() {
+	document.getElementById("butT").disabled = true;
+	document.getElementById("butT").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[0].cells[5].innerHTML = 'T';
+	checkwin()
+}
+
+function testU() {
+	document.getElementById("butU").disabled = true;
+	document.getElementById("butU").style.background='#bbffbb';
+	var myTable = document.getElementById('myTable');
+	myTable.rows[1].cells[1].innerHTML = 'U';
+	checkwin()
+}
+
+
+function testV() {
+	document.getElementById("butV").disabled = true;
+	document.getElementById("butV").style.background='#ffbbbb';
+	other()
+}
+
+function testW() {
+	document.getElementById("butW").disabled = true;
+	document.getElementById("butW").style.background='#ffbbbb';
+	other()
+}
+
+function testX() {
+	document.getElementById("butX").disabled = true;
+	document.getElementById("butX").style.background='#ffbbbb';
+	other()
+}
+
+function testY() {
+	document.getElementById("butY").disabled = true;
+	document.getElementById("butY").style.background='#ffbbbb';
+	other()
+}
+
+function testZ() {
+	document.getElementById("butZ").disabled = true;
+	document.getElementById("butZ").style.background='#ffbbbb';
+	other()
+}
+
+function checkwin() {
+var checkA = Number(document.getElementById("butA").disabled);
+var checkC = Number(document.getElementById("butC").disabled);
+var checkD = Number(document.getElementById("butD").disabled);
+var checkE = Number(document.getElementById("butE").disabled);
+var checkI = Number(document.getElementById("butI").disabled);
+var checkJ = Number(document.getElementById("butJ").disabled);
+var checkM = Number(document.getElementById("butM").disabled);
+var checkN = Number(document.getElementById("butN").disabled);
+var checkO = Number(document.getElementById("butO").disabled);
+var checkR = Number(document.getElementById("butR").disabled);
+var checkS = Number(document.getElementById("butS").disabled);
+var checkT = Number(document.getElementById("butT").disabled);
+var checkU = Number(document.getElementById("butU").disabled);
+var sumcheck = checkA + checkC + checkD + checkE + checkI + checkJ + checkM + checkN + checkO + checkR + checkS + checkT + checkU;
+if (sumcheck === 13) {
+		alert("Bien joué petite orange, clique en bas pour la suite !");
+		document.getElementById("lasuite").style.display = 'block';
+	} 
+}
+
+function other() {
+//CHECKERRORS
+var checkB = Number(document.getElementById("butB").disabled);
+var checkF = Number(document.getElementById("butF").disabled);
+var checkG = Number(document.getElementById("butG").disabled);
+var checkH = Number(document.getElementById("butH").disabled);
+var checkK = Number(document.getElementById("butK").disabled);
+var checkL = Number(document.getElementById("butL").disabled);
+var checkP = Number(document.getElementById("butP").disabled);
+var checkQ = Number(document.getElementById("butQ").disabled);
+var checkV = Number(document.getElementById("butV").disabled);
+var checkW = Number(document.getElementById("butW").disabled);
+var checkX = Number(document.getElementById("butX").disabled);
+var checkY = Number(document.getElementById("butY").disabled);
+var checkZ = Number(document.getElementById("butZ").disabled);
+//
+var sumerrors = checkB + checkF + checkG + checkH + checkK + checkL + checkP + checkQ + checkV + checkW + checkX + checkY + checkZ;
+let texterrors = sumerrors.toString();
+
+switch(texterrors) {
+	case "1":
+		document.getElementById("image").src="images/1.png";
+	break;
+	case "2":
+		document.getElementById("image").src="images/2.png";
+	break;
+	case "3":
+		document.getElementById("image").src="images/3.png";
+	break;
+	case "4":
+		document.getElementById("image").src="images/4.png";
+	break;
+	case "5":
+		document.getElementById("image").src="images/5.png";
+	break;
+	case "6":
+		document.getElementById("image").src="images/6.png";
+	break;
+	case "7":
+		document.getElementById("image").src="images/7.png";
+	break;
+	case "8":
+		document.getElementById("image").src="images/8.png";
+	break;
+	case "9":
+		document.getElementById("image").src="images/9.png";
+	break;
+	case "10":
+		document.getElementById("image").src="images/10.png";
+		alert("Perdu !") ;
+	break;
+}
+
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<html>
+<head>
+  <title>Check this out</title>
+  <style type="text/css">
+      table {
+        float : left;
+      } 
+      td {
+        border: 1px solid;
+        width: 30px;
+        height: 30px;
+      }
+      input {
+        width: 25px;
+        border: 0px;
+        text-align: center;
+      }
+  </style>
+</head>
+<body>
+La grande sagesse mathématique des cockers va t'aider à trouver une partie du code secret. Mais bon elle a quand même ses limites. Vert si c'est bien placé, jaune si c'est pas bien placé, noir si c'est pas dans le code. Pas de doublons. Six essais. Easy<br/><br/>
+		<table id="lefttable">
+       	<tr>
+          <td><input type="text" tabindex="1" id="A1"></td>
+          <td><input type="text" tabindex="2" id="A2"></td>
+          <td><input type="text" tabindex="3" id="A3"></td>
+          <td><input type="text" tabindex="4" id="A4"></td>
+          <td><input type="text" tabindex="5" id="A5"></td>
+          <td><input type="text" tabindex="6" id="A6"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="B1"></td>
+          <td><input type="text" id="B2"></td>
+          <td><input type="text" id="B3"></td>
+          <td><input type="text" id="B4"></td>
+          <td><input type="text" id="B5"></td>
+          <td><input type="text" id="B6"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="C1"></td>
+          <td><input type="text" id="C2"></td>
+          <td><input type="text" id="C3"></td>
+          <td><input type="text" id="C4"></td>
+          <td><input type="text" id="C5"></td>
+          <td><input type="text" id="C6"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="D1"></td>
+          <td><input type="text" id="D2"></td>
+          <td><input type="text" id="D3"></td>
+          <td><input type="text" id="D4"></td>
+          <td><input type="text" id="D5"></td>
+          <td><input type="text" id="D6"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="E1"></td>
+          <td><input type="text" id="E2"></td>
+          <td><input type="text" id="E3"></td>
+          <td><input type="text" id="E4"></td>
+          <td><input type="text" id="E5"></td>
+          <td><input type="text" id="E6"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="F1"></td>
+          <td><input type="text" id="F2"></td>
+          <td><input type="text" id="F3"></td>
+          <td><input type="text" id="F4"></td>
+          <td><input type="text" id="F5"></td>
+          <td><input type="text" id="F6"></td>
+        </tr>
+    </table>
+
+    <table id="righttable">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+    </table>
+
+
+<input type="button" id="bouton1" onclick="ligne1();" value="GO" />
+<br/><br/>
+<input type="button" id="bouton2" onclick="ligne2();" value="GO" />
+<br/><br/>
+<input type="button" id="bouton3" onclick="ligne3();" value="GO" />
+<br/><br/>
+<input type="button" id="bouton4" onclick="ligne4();" value="GO" />
+<br/><br/>
+<input type="button" id="bouton5" onclick="ligne5();" value="GO" />
+<br/><br/>
+<input type="button" id="bouton6" onclick="ligne6();" value="GO" />
+<!-- 
+FIN CODE HTML
+DEBUT CODAGE JS
+!-->
+
+<br/><br/><br/>
+Reporte le code secret ici :
+
+<script type="text/javascript">
+function ligne1() {
+  document.getElementById("bouton1").disabled = true;
+  //037219
+  var aa1 = Math.round(document.getElementById("A1").value);
+  var aa2 = Math.round(document.getElementById("A2").value);
+  var aa3 = Math.round(document.getElementById("A3").value);
+  var aa4 = Math.round(document.getElementById("A4").value);
+  var aa5 = Math.round(document.getElementById("A5").value);
+  var aa6 = Math.round(document.getElementById("A6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+  if ([0].includes(aa1)) {
+      x[0].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(aa1)) {
+      x[0].style.backgroundColor = "yellow";}    
+  else {
+      x[0].style.backgroundColor = "black";}
+
+  if ([3].includes(aa2)) {
+      x[1].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(aa2)) {
+      x[1].style.backgroundColor = "yellow";}    
+  else {
+      x[1].style.backgroundColor = "black";}
+  
+  if ([7].includes(aa3)) {
+      x[2].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(aa3)) {
+      x[2].style.backgroundColor = "yellow";}    
+  else {
+      x[2].style.backgroundColor = "black";}
+
+  if ([2].includes(aa4)) {
+      x[3].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(aa4)) {
+      x[3].style.backgroundColor = "yellow";}    
+  else {
+      x[3].style.backgroundColor = "black";}
+
+  if ([1].includes(aa5)) {
+      x[4].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(aa5)) {
+      x[4].style.backgroundColor = "yellow";}    
+  else {
+      x[4].style.backgroundColor = "black";}
+
+  if ([9].includes(aa6)) {
+      x[5].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(aa6)) {
+      x[5].style.backgroundColor = "yellow";}    
+  else {
+      x[5].style.backgroundColor = "black";}
+
+}
+
+// LIGNE 2
+
+function ligne2() {
+  //037219
+    document.getElementById("bouton2").disabled = true;
+  var ab1 = Math.round(document.getElementById("B1").value);
+  var ab2 = Math.round(document.getElementById("B2").value);
+  var ab3 = Math.round(document.getElementById("B3").value);
+  var ab4 = Math.round(document.getElementById("B4").value);
+  var ab5 = Math.round(document.getElementById("B5").value);
+  var ab6 = Math.round(document.getElementById("B6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+
+  if ([0].includes(ab1)) {
+      x[6].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(ab1)) {
+      x[6].style.backgroundColor = "yellow";}    
+  else {
+      x[6].style.backgroundColor = "black";}
+
+  if ([3].includes(ab2)) {
+      x[7].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(ab2)) {
+      x[7].style.backgroundColor = "yellow";}    
+  else {
+      x[7].style.backgroundColor = "black";}
+  
+  if ([7].includes(ab3)) {
+      x[8].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(ab3)) {
+      x[8].style.backgroundColor = "yellow";}    
+  else {
+      x[8].style.backgroundColor = "black";}
+
+  if ([2].includes(ab4)) {
+      x[9].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(ab4)) {
+      x[9].style.backgroundColor = "yellow";}    
+  else {
+      x[9].style.backgroundColor = "black";}
+
+  if ([1].includes(ab5)) {
+      x[10].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(ab5)) {
+      x[10].style.backgroundColor = "yellow";}    
+  else {
+      x[10].style.backgroundColor = "black";}
+
+  if ([9].includes(ab6)) {
+      x[11].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(ab6)) {
+      x[11].style.backgroundColor = "yellow";}    
+  else {
+      x[11].style.backgroundColor = "black";}
+}
+
+//LIGNE 3
+
+function ligne3() {
+  //037219
+      document.getElementById("bouton3").disabled = true;
+  var ac1 = Math.round(document.getElementById("C1").value);
+  var ac2 = Math.round(document.getElementById("C2").value);
+  var ac3 = Math.round(document.getElementById("C3").value);
+  var ac4 = Math.round(document.getElementById("C4").value);
+  var ac5 = Math.round(document.getElementById("C5").value);
+  var ac6 = Math.round(document.getElementById("C6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+
+  if ([0].includes(ac1)) {
+      x[12].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(ac1)) {
+      x[12].style.backgroundColor = "yellow";}    
+  else {
+      x[12].style.backgroundColor = "black";}
+
+  if ([3].includes(ac2)) {
+      x[13].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(ac2)) {
+      x[13].style.backgroundColor = "yellow";}    
+  else {
+      x[13].style.backgroundColor = "black";}
+  
+  if ([7].includes(ac3)) {
+      x[14].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(ac3)) {
+      x[14].style.backgroundColor = "yellow";}    
+  else {
+      x[14].style.backgroundColor = "black";}
+
+  if ([2].includes(ac4)) {
+      x[15].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(ac4)) {
+      x[15].style.backgroundColor = "yellow";}    
+  else {
+      x[15].style.backgroundColor = "black";}
+
+  if ([1].includes(ac5)) {
+      x[16].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(ac5)) {
+      x[16].style.backgroundColor = "yellow";}    
+  else {
+      x[16].style.backgroundColor = "black";}
+
+  if ([9].includes(ac6)) {
+      x[17].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(ac6)) {
+      x[17].style.backgroundColor = "yellow";}    
+  else {
+      x[17].style.backgroundColor = "black";}
+}
+// LIGNE 4
+
+function ligne4() {
+  //037219
+      document.getElementById("bouton4").disabled = true;
+  var ad1 = Math.round(document.getElementById("D1").value);
+  var ad2 = Math.round(document.getElementById("D2").value);
+  var ad3 = Math.round(document.getElementById("D3").value);
+  var ad4 = Math.round(document.getElementById("D4").value);
+  var ad5 = Math.round(document.getElementById("D5").value);
+  var ad6 = Math.round(document.getElementById("D6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+
+  if ([0].includes(ad1)) {
+      x[18].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(ad1)) {
+      x[18].style.backgroundColor = "yellow";}    
+  else {
+      x[18].style.backgroundColor = "black";}
+
+  if ([3].includes(ad2)) {
+      x[19].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(ad2)) {
+      x[19].style.backgroundColor = "yellow";}    
+  else {
+      x[19].style.backgroundColor = "black";}
+  
+  if ([7].includes(ad3)) {
+      x[20].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(ad3)) {
+      x[20].style.backgroundColor = "yellow";}    
+  else {
+      x[20].style.backgroundColor = "black";}
+
+  if ([2].includes(ad4)) {
+      x[21].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(ad4)) {
+      x[21].style.backgroundColor = "yellow";}    
+  else {
+      x[21].style.backgroundColor = "black";}
+
+  if ([1].includes(ad5)) {
+      x[22].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(ad5)) {
+      x[22].style.backgroundColor = "yellow";}    
+  else {
+      x[22].style.backgroundColor = "black";}
+
+  if ([9].includes(ad6)) {
+      x[23].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(ad6)) {
+      x[23].style.backgroundColor = "yellow";}    
+  else {
+      x[23].style.backgroundColor = "black";}
+}
+
+//LIGNE 5
+
+function ligne5() {
+  //037219
+      document.getElementById("bouton5").disabled = true;
+  var ae1 = Math.round(document.getElementById("E1").value);
+  var ae2 = Math.round(document.getElementById("E2").value);
+  var ae3 = Math.round(document.getElementById("E3").value);
+  var ae4 = Math.round(document.getElementById("E4").value);
+  var ae5 = Math.round(document.getElementById("E5").value);
+  var ae6 = Math.round(document.getElementById("E6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+
+  if ([0].includes(ae1)) {
+      x[24].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(ae1)) {
+      x[24].style.backgroundColor = "yellow";}    
+  else {
+      x[24].style.backgroundColor = "black";}
+
+  if ([3].includes(ae2)) {
+      x[25].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(ae2)) {
+      x[25].style.backgroundColor = "yellow";}    
+  else {
+      x[25].style.backgroundColor = "black";}
+  
+  if ([7].includes(ae3)) {
+      x[26].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(ae3)) {
+      x[26].style.backgroundColor = "yellow";}    
+  else {
+      x[26].style.backgroundColor = "black";}
+
+  if ([2].includes(ae4)) {
+      x[27].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(ae4)) {
+      x[27].style.backgroundColor = "yellow";}    
+  else {
+      x[27].style.backgroundColor = "black";}
+
+  if ([1].includes(ae5)) {
+      x[28].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(ae5)) {
+      x[28].style.backgroundColor = "yellow";}    
+  else {
+      x[28].style.backgroundColor = "black";}
+
+  if ([9].includes(ae6)) {
+      x[29].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(ae6)) {
+      x[29].style.backgroundColor = "yellow";}    
+  else {
+      x[29].style.backgroundColor = "black";}
+}
+
+
+//LIGNE 6
+
+function ligne6() {
+  //037219
+      document.getElementById("bouton6").disabled = true;
+  var af1 = Math.round(document.getElementById("F1").value);
+  var af2 = Math.round(document.getElementById("F2").value);
+  var af3 = Math.round(document.getElementById("F3").value);
+  var af4 = Math.round(document.getElementById("F4").value);
+  var af5 = Math.round(document.getElementById("F5").value);
+  var af6 = Math.round(document.getElementById("F6").value);
+  var x = document.getElementById("righttable").getElementsByTagName("td");
+
+
+  if ([0].includes(af1)) {
+      x[30].style.backgroundColor = "green";}
+  else if ([1, 2, 3, 7, 9].includes(af1)) {
+      x[30].style.backgroundColor = "yellow";}    
+  else {
+      x[30].style.backgroundColor = "black";}
+
+  if ([3].includes(af2)) {
+      x[31].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 7, 9].includes(af2)) {
+      x[31].style.backgroundColor = "yellow";}    
+  else {
+      x[31].style.backgroundColor = "black";}
+  
+  if ([7].includes(af3)) {
+      x[32].style.backgroundColor = "green";}
+  else if ([1, 2, 0, 3, 9].includes(af3)) {
+      x[32].style.backgroundColor = "yellow";}    
+  else {
+      x[32].style.backgroundColor = "black";}
+
+  if ([2].includes(af4)) {
+      x[33].style.backgroundColor = "green";}
+  else if ([1, 3, 0, 7, 9].includes(af4)) {
+      x[33].style.backgroundColor = "yellow";}    
+  else {
+      x[33].style.backgroundColor = "black";}
+
+  if ([1].includes(af5)) {
+      x[34].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 9].includes(af5)) {
+      x[34].style.backgroundColor = "yellow";}    
+  else {
+      x[34].style.backgroundColor = "black";}
+
+  if ([9].includes(af6)) {
+      x[35].style.backgroundColor = "green";}
+  else if ([2, 3, 0, 7, 1].includes(af6)) {
+      x[35].style.backgroundColor = "yellow";}    
+  else {
+      x[35].style.backgroundColor = "black";}
+}
+
+</script>
+
+
+</body>
+</html>
