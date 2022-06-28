@@ -142,6 +142,11 @@ DEBUT CODAGE JS
 
 <br/><br/><br/>
 Reporte le code secret ici :
+	
+<input type="text" id="code">
+<input type="button" id="gogogo" onclick="testcode();" value="GO" />
+</br></br>
+<input type="button" id="next" onclick="location.href='./pendu.html';" hidden value="Thank you, next !" />
 
 <script type="text/javascript">
 function ligne1() {
@@ -484,6 +489,20 @@ function ligne6() {
       x[35].style.backgroundColor = "black";}
 }
 
+function testcode() {
+var check=document.getElementById("code").value == "037219";
+if (check) {
+	alert("Tooop ! Le lien pour la suite en dessous ... ");
+	document.getElementById("next").style.display = 'block';
+	}
+if (!check) {
+	alert("Nope nope ! On recommence");
+}
+
+}
+
+	
+	
 </script>
 
 
